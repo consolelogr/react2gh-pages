@@ -1,0 +1,26 @@
+
+body{
+  background: lightblue;
+  font-size: 20px;
+}
+.wrappi{
+
+  margin: 0  auto;
+  margin-top: 1rem;
+  width: 20rem;
+  padding: 3rem;
+  border: 1rem solid #222;
+}
+.spanni {
+background:green;
+padding: 1rem;
+margin: 0;
+}
+.spanniTiukka{
+  background: red;
+}
+button{
+  border: 0;
+  margin-top: 0;
+  padding: 1rem;
+}

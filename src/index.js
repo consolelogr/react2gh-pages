@@ -8,6 +8,7 @@ import  Counters from './components/counters.jsx';
 ReactDOM.render(
   <React.StrictMode>
     <Counters />
+    
   </React.StrictMode>,
 
   document.getElementById('root')

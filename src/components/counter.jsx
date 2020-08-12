@@ -3,7 +3,7 @@ import './styyli.css';
 
 class Counter extends Component {
   state = {
-    value: this.props.value,
+    value: this.props.counter.value,
     count: 0
   };
 
@@ -13,13 +13,18 @@ class Counter extends Component {
   }
 
   
+
 render() {   
-    return ( 
+    return (
+
         <div className="wrappi">
         <span className={this.styyliChangee()}> {this.formatCount()}</span> 
-        <button onClick={ () => {this.handleIncrement()}} > BUTTON</button>
+        <button 
+         onClick={ () => {this.handleIncrement()}} > more</button>
+        <button onClick= { () => this.props.onDelete(this.props.counter.id)
+        } className="deleteButton">DEL</button>
       </div> 
-    );   
+    );    
   }
 
   styyliChangee() {   

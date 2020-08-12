@@ -14,12 +14,12 @@ body{
 
 .spanni {
   padding: 0.1rem 0.4rem 0.1rem 0.4rem;
-  background:red;
+  background: linear-gradient(45deg, red, lightblue,lightblue);
 }
 
 .spanniTiukka {
   padding: 0.1rem 0.4rem 0.1rem 0.4rem;
-  background: green;
+  background: linear-gradient(320deg, green, lightblue,lightblue);
     margin: 0;
     }
 
@@ -28,5 +28,9 @@ body{
   margin-top: 0;
   padding: 0.2rem;
   margin-left: 1rem;
-  float: right;
+  background: linear-gradient(45deg, yellow, orange)
+}
+.deleteButton{
+  background: linear-gradient(45deg, blue, lightblue);
+  padding: 0.2rem;
 }

@@ -11,25 +11,48 @@ class Counters extends Component {
     ]  
     };
 
+
+handleIncrement = counter => {
+  const counters =[...this.state.counters];
+  const index = counters.indexOf(counter);
+  counters[index] = { ...counter};
+  counters[index].value++;
+  this.setState({counters});
+}
+
+handleReset = () => {
+  const counters = this.state.counters.map (c => {
+  c.value = 0;
+  return c;
+  });
+  this.setState( {counters});
+}
+
 handleDelete = counterId =>  {
 const counters = this.state.counters.filter(c => c.id !== counterId);
-this.setState({counters});
-
+this.setState({counters}); 
 };
 
-  render() { 
+
+  render() {  
     return ( 
       <div>
+        <button
+        onClick={this.handleReset}
+        className="reset">RESET </button>
+        <span className="topSpan">React2gh-p</span>
         {this.state.counters.map(counter => ( 
-        <Counter 
-        key={counter.id} 
-        onDelete={this.handleDelete} 
-        value={counter.value}
-        counter = {counter}
-        />
-        
-        ) )}
-        </div>
+          <Counter 
+            key={counter.id} 
+            onDelete={this.handleDelete}
+            onIncrement = {this.handleIncrement} 
+            //svalue={counter.value}
+            counter = {counter}
+          />
+         ))
+         };
+
+      </div>
     );
   }
 

@@ -38,14 +38,14 @@ this.setState({counters});
     return ( 
       <div>
         <button
-        onClick={this.handleReset}
+        onClick={this.props.onReset}
         className="reset">RESET </button>
         <span className="topSpan">React2gh-p</span>
-        {this.state.counters.map(counter => ( 
+        {this.props.counters.map(counter => ( 
           <Counter 
             key={counter.id} 
-            onDelete={this.handleDelete}
-            onIncrement = {this.handleIncrement} 
+            onDelete={this.props.onDelete}
+            onIncrement = {this.props.onIncrement} 
             //svalue={counter.value}
             counter = {counter}
           />

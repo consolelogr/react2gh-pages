@@ -3,13 +3,16 @@ import './styyli.css';
 
 class Counter extends Component {
 
+    componentDidUpdate(){
+      console.log("app - componentDidUpdate");
+    }
   render() {   
     return (
 
         <div className="wrappi">
-          <span className={this.styyliChangee()}> {this.formatCount()}</span> 
+          <div className={this.styyliChangee()}> {this.formatCount()}</div> 
           <button onClick={ () => this.props.onIncrement(this.props.counter) } 
-          > more</button>
+          > ADD</button>
           <button onClick= { () => this.props.onDelete(this.props.counter.id)
           } className="deleteButton">DEL</button>
         </div> 
@@ -17,8 +20,8 @@ class Counter extends Component {
   }
 
   styyliChangee() {   
-    let classes = "spanni";
-    classes += this.props.counter.value  === 0 ? "" : "Tiukka";
+    let classes = "number";
+    classes += this.props.counter.value  === 0 ? "" : "Changed";
     return classes ;
   }
 

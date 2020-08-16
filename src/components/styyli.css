@@ -1,46 +1,81 @@
-
 body{
-  background: lightblue;
   font-size: 20px;
+background: #222;
 }
-.wrappi{
- width: 10rem;
-  margin-top: 0.5rem;
-  padding: 0.3rem;
-  border:0.3rem solid #222;
-  margin-bottom: 0.1rem;
-  margin-left: 0.5rem;
+
+.navbar{
+  background: linear-gradient(160deg,#222,#aaa);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 0.51rem solid #555;
 }
-.reset{
-  background: #ddd;
-  margin-left: 0.5rem;
+
+.navbarSpan{
+  color: red;
+  font-size: 1rem;
+  color: #222;
 
 }
+
+.wrappi{
+  width: 12rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 0.1rem solid #444;
+  margin-bottom: 0.1rem;
+  margin: 0 auto;
+  background:linear-gradient(160deg,#222,#aaa);
+}
+
+.resetReload{
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 12rem;
+  margin-bottom: 2rem;  
+}
+.resetReloadButton {
+    margin: 0;
+  color:#222;
+  min-width: 6rem;
+  background: #444;
+  color: #999;
+
+}
+
 .topSpan{
-  
   color: white;
   text-shadow: 0.1rem 0.1rem 0.11rem #222;
   text-decoration: underline;
-  margin-left: 0.7rem;
-}
-.spanni {
-  padding: 0.1rem 0.4rem 0.1rem 0.4rem;
-  background: linear-gradient(45deg, red, lightblue,lightblue);
+  margin: 0 auto;
+  font-size: 2rem;
+  text-align: center;
 }
 
-.spanniTiukka {
+.number {
+  min-width: 3rem;
+  float:left;
   padding: 0.1rem 0.4rem 0.1rem 0.4rem;
-  background: linear-gradient(320deg, green, lightblue,lightblue);
-    margin: 0;
-    }
+  font-size: 1.2rem;
+  color: #777;
+  
+}
 
-  button{
-  border: 0.2rem solid #222;
-  margin-top: 0;
+.numberChanged {
+  min-width: 3rem;
+  color: #eee;
+  float: left;
+  padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+  font-size: 1.2rem;    
+}
+
+button{
   padding: 0.2rem;
   margin-left: 1rem;
-  background: linear-gradient(45deg, yellow, orange)
+  background: linear-gradient(45deg, yellow, orange);
+  min-width: 3rem;
+  min-height: 2rem;
 }
+
 .deleteButton{
   background: linear-gradient(45deg, blue, lightblue);
   padding: 0.2rem;

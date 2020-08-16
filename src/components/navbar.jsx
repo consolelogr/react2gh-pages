@@ -7,10 +7,11 @@ class navbar  extends Component {
 
       <nav className="navbar">
         <span className="navbarSpan">
+        <span className="topSpan">React2gh-pages<br /></span>
+
          Counters: {this.props.totalCounters} 
         </span>
-        <a className="navbarLinks"href="#">
-        </a>
+        
       </nav>
 
     ); // end return

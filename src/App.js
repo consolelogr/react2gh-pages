@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from './components/navbar.jsx';
 import  Counters from './components/counters.jsx';
 import main from './components/main.jsx';
-import Counter from './components/counter';
-import { render } from '@testing-library/react';
+// import Counter from './components/counter';
+// import { render } from '@testing-library/react';
 import { Component } from 'react';
 
 class App extends Component {
@@ -16,7 +16,13 @@ class App extends Component {
       {id:4, value: 0}
     ]  
     };
-
+constructor(){
+  super();
+  console.log("App - Contructor");
+}
+componentDidMount(){
+  console.log("App - componentDidMount");
+}
 
 handleIncrement = counter => {
   const counters =[...this.state.counters];
@@ -24,6 +30,7 @@ handleIncrement = counter => {
   counters[index] = { ...counter};
   counters[index].value++;
   this.setState({counters});
+
 }
 
 handleReset = () => {
@@ -40,6 +47,7 @@ this.setState({counters});
 };
 
 render(){  
+  console.log("App - Render");
   return (
     <React.Fragment>
     <Navbar totalCounters={this.state.counters.filter(c => c.value > 0).length}   />

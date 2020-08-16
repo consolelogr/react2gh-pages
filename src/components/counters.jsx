@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Counter from "./counter.jsx";
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
 class Counters extends Component {
   state = {
     counters:[
@@ -33,14 +37,16 @@ const counters = this.state.counters.filter(c => c.id !== counterId);
 this.setState({counters}); 
 };
 
-
   render() {  
-    return ( 
+    return (
+       
       <div>
-        <button
-        onClick={this.props.onReset}
-        className="reset">RESET </button>
-        <span className="topSpan">React2gh-p</span>
+        <div className="resetReload">
+        <button onClick={this.props.onReset} className="resetReloadButton"> RESET </button>
+        <button onClick={ () => window.location.reload(false)} className="resetReloadButton"> RELOAD </button>
+        </div>
+
+
         {this.props.counters.map(counter => ( 
           <Counter 
             key={counter.id} 
